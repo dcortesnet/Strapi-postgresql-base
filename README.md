@@ -53,7 +53,7 @@ $ docker-compose down # Bajar los servicios
 
 Instrucciones básicas para levantar un ambiente de desarrollo local.
 
-Ejecutar `npm run develop` para un servidor de desarrollo. Navega a `http://localhost:3000/`. La aplicación se recargará automáticamente si cambias cualquiera de los archivos fuente si estas en el modo watch.
+Ejecutar `npm run develop` para un servidor de desarrollo. Navega a `http://localhost:1337/`. La aplicación se recargará automáticamente si cambias cualquiera de los archivos fuente si estas en el modo watch.
 
 ```bash
 $ npm run develop

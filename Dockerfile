@@ -1,21 +1,8 @@
-FROM strapi/base:14
-
+FROM node:14-alpine as node
 WORKDIR /app
-
-COPY package.json .
-COPY yarn.lock .
-
-RUN yarn install --frozen-lockfile
-
-COPY favicon.ico .
-COPY public/robots.txt public/
-COPY public/index.html public/
-COPY extensions/ extensions/
-COPY api/ api/
-COPY config/ config/
-
-RUN yarn build
-
+ADD package.json /app/package.json
+RUN npm install
+COPY . ./
+RUN npm run build
 EXPOSE 1337
-
-CMD ["yarn", "start"]
+CMD ["npm","run", "start"]

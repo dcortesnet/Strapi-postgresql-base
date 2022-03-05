@@ -20,16 +20,17 @@ services:
     build: .
     container_name: strapi_dockerize
     environment:
-      DATABASE_HOST: localhost
-      DATABASE_SRV: true
+      DATABASE_HOST: database
+      DATABASE_SRV: "true"
       DATABASE_PORT: 5432
       DATABASE_NAME: strapi-postgresql-base
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres
-      DATABASE_SSL: false
+      DATABASE_SSL: "false"
       ADMIN_JWT_SECRET: gjug67QZ1lT5beUUg+eSWg==,e8qpjKtAHG0ShY5WHmCnjA==,GwQGTVC5iTwN+Gx4n1FQ2Q==,w4tGK3l9/uBYquPtimr0Pg==
       JWT_SECRET: b5ce405d-8c18-4919-9084-a9168509aa1c
       API_TOKEN_SALT: 10cf01d5e670e1a7b9b8b0503488083c
+      APP_KEYS: appkey1
     ports:
       - '1337:1337'
     depends_on:
